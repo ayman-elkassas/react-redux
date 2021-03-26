@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+//*redux
+import {createStore} from 'redux'
+//*initReducer
+import reducer from './reducers/rootReducer'
+
+//todo:create redux store
+const store=createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
