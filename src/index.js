@@ -7,13 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux'
 //*initReducer
 import reducer from './reducers/rootReducer'
+//*to connect between store and react app
+import {Provider} from 'react-redux'
 
 //todo:create redux store
 const store=createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
